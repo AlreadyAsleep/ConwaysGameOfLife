@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="content/fonts/stylesheet.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Game Of Life</title>
+</head>
+
+<body>
+  <div id="page">
+    <div class="header">
+      <h1>Conway's Game of Life</h1>
+    </div>
+    <div class="canvas-container">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+    <div class="controls-container">
+      <div>
+        <i class="fa fa-refresh" onclick="plotInitialGeneration();"></i>
+      </div>
+      <div>
+        <i class="fa fa-step-forward" onclick="plotNextGeneration();"></i>
+      </div>
+      <div>
+        <i id="play-button" class="fa fa-play" onclick="autoUpdate();"></i>
+      </div>
+    </div>
+    <div class="rules-container">
+      <p>Any live cell with two or three live neighbours survives</p>
+      <p>Any dead cell with three live neighbours becomes a live cell</p>
+      <p>All other live cells die in the next generation. Similarly, all other dead cells stay dead</p>
+    </div>
+    <div class="footer">
+      &copy;2020 Ben Heil
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
