@@ -30,6 +30,16 @@
 .footer{
   grid-area: footer;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  vertical-align: center;
+  align-content: center;
+  margin: auto;
+}
+
+.footer > p{
+  margin-left: 3vh;
+  margin-right: 3vh;
 }
 
 .controls-container{
@@ -56,6 +66,22 @@
   color: rgb(9, 116, 255);
 }
 
+a{
+  text-decoration: none;
+}
+
+a:active{
+  color: rgb(9, 116, 255);
+}
+
+a:hover{
+  color: rgb(255, 9, 243);
+}
+
+a:visited{
+  color:#00ff00;
+}
+
 #page{
   display: grid;
   grid-template-areas: 
@@ -63,7 +89,7 @@
     'canvas   canvas canvas'
     '.        controls  .'
     'rules    rules  rules'
-    '.        footer .'
+    'footer   footer footer'
   ;
   grid-template-columns: repeat(3, 1fr);
   font-family: 'kongtextregular' , Arial, sans-serif;
@@ -75,7 +101,7 @@ body{
   background-color: black;
 }
 
-@media(max-width:400px){
+@media(max-width:600px){
   #page{
     grid-template-areas: 
     'header'
@@ -101,6 +127,7 @@ body{
 
   .footer{
     margin-top: 10px;
+    flex-direction: column;
   }
 
   .controls-container > *:hover{
